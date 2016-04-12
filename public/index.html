@@ -1,39 +1,41 @@
 <!DOCTYPE html>
 
-<html>
-
-	<head>
-		<title>Clementine.js - The elegant and lightweight full stack JavaScript boilerplate.</title>
+<html lang="en">
+  	<head>
+    	<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	
+		<title>File browser</title>
 		
 		<link href="/public/css/main.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="/public/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/public/css/dataTables.bootstrap.css">
 	</head>
 
-	<header>
-		<p>Welcome, <span id="display-name"></span>!</p>
-		<a class="menu" href="/profile">Profile</a>
-		<p>|</p>
-		<a class="menu" href="/logout">Logout</a>
-	</header>
-
 	<body>
-		<div class="container">
-			<img src="/public/img/clementine_150.png" />
-			<br />
-			<p class="clementine-text">Clementine.js</p>
-		</div>
 	
-		<div class="container">
-			<p>You have clicked the button <span id="click-nbr"></span> times.</p>
-			<br />
-			<div class="btn-container">
-				<button type="submit" class="btn btn-add">CLICK ME!</button>
-				<button class="btn btn-delete">RESET</button>
-			</div>
+	<div class="panel panel-default">
+		<div class="panel-heading"><h3>File Browser</h3></div>
+		<div class="panel-body">
+			
+			<table id="browser" class="table table-striped table-hover" width="100%">
+				<thead>
+					<tr>
+						<th>Filename</th>
+						<th>Size</th>
+					</tr>
+				</thead>
+
+			</table>
+			
 		</div>
-		
-		<script type="text/javascript" src="common/ajax-functions.js"></script>
-		<script type="text/javascript" src="controllers/clickController.client.js"></script>
-		<script type="text/javascript" src="controllers/userController.client.js"></script>
+	</div>
+	
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/datatables/jquery.dataTables.js"></script>
+		<script type="text/javascript" src="js/datatables/dataTables.bootstrap.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
 	</body>
 
 </html>
